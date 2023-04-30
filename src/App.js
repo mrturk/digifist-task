@@ -1,3 +1,4 @@
+/* eslint-disable */
 import { Stack, useTheme, useMediaQuery, Typography } from "@mui/material";
 import "./App.css";
 import ProductCarousel from "./components/ProductCarousel";
@@ -66,19 +67,17 @@ function App() {
                 objectFit: isDown1660px ? "cover" : "fill",
               },
         }}
-        flex={2}
+        flex={1}
       >
-        <img className="left-image" src="assets/img/bg.png" />
+        <img className="left-image" src="assets/img/bg.png" alt="image" />
       </Stack>
 
       <Stack
-        position={isMobile ? "absolute" : "inherit"}
+        position={isMobile ? "absolute" : "initial"}
+        justifyContent="center"
+        alignItems="center"
         bottom="80px"
-        sx={
-          isMobile
-            ? { width: "100%", justifyContent: "center", alignItems: "center" }
-            : { flex: "1", paddingTop: "120px" }
-        }
+        sx={isMobile ? { width: "100%" } : { flex: "1" }}
       >
         <Stack padding={isMobile ? "20px" : "0px"} gap="12px">
           <Stack>

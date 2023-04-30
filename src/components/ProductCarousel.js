@@ -1,3 +1,4 @@
+/* eslint-disable */
 import { Stack, IconButton } from "@mui/material";
 import { useRef, useState } from "react";
 import { ArrowIcon } from "../icons/ArrowIcon";

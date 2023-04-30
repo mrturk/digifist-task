@@ -30,6 +30,7 @@ const ProductCard = ({ product }) => {
             height: isMobile ? "200px" : "310px",
           }}
           src={product.productImg}
+          alt={product.productImg}
         />
       </Stack>
       <Stack gap="4px">
