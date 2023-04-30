@@ -77,7 +77,7 @@ function App() {
         <Stack
           position={isMobile ? "absolute" : "initial"}
           top="-260px"
-          paddingLeft={isMobile ? "0px" : "20px"}
+          paddingLeft={isMobile ? "0px" : "128px"}
           gap="12px"
         >
           <Stack>
