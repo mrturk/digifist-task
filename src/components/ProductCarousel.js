@@ -1,13 +1,15 @@
 /* eslint-disable */
-import { Stack, IconButton } from "@mui/material";
+import { Stack, IconButton, useMediaQuery, useTheme } from "@mui/material";
 import { useRef, useState } from "react";
 import { ArrowIcon } from "../icons/ArrowIcon";
 import ProductCard from "./ProductCard";
-import useDeviceDetect from "../utils/useDeviceDetect";
+import { ScrollContainer } from "react-indiana-drag-scroll";
+import "react-indiana-drag-scroll/dist/style.css";
 
 export default function ProductCarousel({ products }) {
+  const theme = useTheme();
+  const isMobile = useMediaQuery(theme.breakpoints.down("md"));
   const ref = useRef();
-  const { isMobileDevice } = useDeviceDetect();
 
   const [prev, setPRev] = useState(false);
 
@@ -60,16 +62,30 @@ export default function ProductCarousel({ products }) {
         paddingBottom="20px"
         sx={{
           overflowX: "scroll",
-          overflow: isMobileDevice ? "overlay" : "hidden",
+          overflow: "hidden",
+          "&& .scroll-drag": {
+            display: "flex",
+            flexDirection: "row",
+            gap: "32px",
+          },
         }}
         flexDirection="row"
         gap="32px"
       >
-        {products.map((item, index) => {
-          return <ProductCard key={index} product={item} />;
-        })}
+        {isMobile ? (
+          <ScrollContainer className="scroll-drag">
+            {products.map((item, index) => {
+              return <ProductCard key={index} product={item} />;
+            })}
+          </ScrollContainer>
+        ) : (
+          products.map((item, index) => {
+            return <ProductCard key={index} product={item} />;
+          })
+        )}
       </Stack>
-      {!isMobileDevice && (
+
+      {!isMobile && (
         <>
           <Stack position="absolute" left="20px" top="40%">
             {prev && (
