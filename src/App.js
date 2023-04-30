@@ -54,7 +54,7 @@ function App() {
           "&& .left-image": isMobile
             ? {
                 minHeight: "450px",
-                maxHeight: "550px",
+                maxHeight: "650px",
                 maxWidth: "900px",
                 minWidth: "360px",
                 width: "100%",
