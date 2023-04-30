@@ -118,7 +118,7 @@ function App() {
                   fontStyle="normal"
                   fontSize="12.8px"
                   lineHeight="17.48px"
-                  color={isMobile ? "white" : "#666666"}
+                  color={isMobile ? "white" : "black"}
                   sx={{
                     textDecoration: "underline",
                     textUnderlineOffset: "5px",

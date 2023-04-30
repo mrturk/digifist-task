@@ -36,15 +36,27 @@ const ProductCard = ({ product }) => {
       <Stack gap="4px">
         <Stack>
           <Stack>
-            <Typography
-              fontFamily="Avenir"
-              fontWeight="400"
-              fontSize="12.8px"
-              lineHeight="20.48px"
-              color="black"
-            >
-              365 Signature Hoodie
-            </Typography>
+            {isMobile ? (
+              <Typography
+                fontFamily="Avenir"
+                fontWeight="400"
+                fontSize="12.8px"
+                lineHeight="20.48px"
+                color="black"
+              >
+                Organic Skinny High Waist Raw Hem Jeans
+              </Typography>
+            ) : (
+              <Typography
+                fontFamily="Avenir"
+                fontWeight="400"
+                fontSize="12.8px"
+                lineHeight="20.48px"
+                color="black"
+              >
+                365 Signature Hoodie
+              </Typography>
+            )}
           </Stack>
         </Stack>
         <Stack flexDirection="row" justifyContent="space-between">
