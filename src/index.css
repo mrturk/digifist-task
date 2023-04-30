@@ -11,3 +11,15 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+@font-face {
+  font-family: 'Avenir';
+  src: url("./fonts/Avenir.ttc");
+}
+
+
+
+@font-face {
+  font-family: 'ITC Avant Garde Gothic Pro';
+  src: url("./fonts/ITCAvantGardePro-Bold.otf");
+}
