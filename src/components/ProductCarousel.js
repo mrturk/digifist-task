@@ -52,7 +52,7 @@ export default function ProductCarousel({ products }) {
   return (
     <Stack
       maxWidth="auto"
-      minWidth="320px"
+      minWidth="300px"
       width="100%"
       sx={{ position: "relative" }}
     >
@@ -66,7 +66,7 @@ export default function ProductCarousel({ products }) {
           "&& .scroll-drag": {
             display: "flex",
             flexDirection: "row",
-            gap: "32px",
+            gap: "12px",
           },
         }}
         flexDirection="row"
