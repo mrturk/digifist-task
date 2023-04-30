@@ -66,6 +66,7 @@ const ProductCard = ({ product }) => {
               {colorDataForApi.map((item, index) => {
                 return (
                   <Stack
+                    key={index}
                     sx={{
                       cursor: "pointer",
                     }}

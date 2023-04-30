@@ -1,6 +1,6 @@
 import { Stack, useTheme, useMediaQuery, Typography } from "@mui/material";
 import "./App.css";
-import TaskSlider from "./components/Carousel";
+import ProductCarousel from "./components/ProductCarousel";
 
 const productFromApi = [
   {
@@ -53,7 +53,7 @@ function App() {
         sx={{
           "&& .left-image": isMobile
             ? {
-                height: "550px",
+                height: "500px",
                 maxWidth: "900px",
                 minWidth: "360px",
                 width: "100%",
@@ -66,14 +66,14 @@ function App() {
                 objectFit: isDown1660px ? "cover" : "fill",
               },
         }}
-        flex={1}
+        flex={2}
       >
         <img className="left-image" src="assets/img/bg.png" />
       </Stack>
 
       <Stack
         position={isMobile ? "absolute" : "inherit"}
-        bottom="100px"
+        bottom="80px"
         sx={
           isMobile
             ? { width: "100%", justifyContent: "center", alignItems: "center" }
@@ -128,8 +128,8 @@ function App() {
                   Shop all everyday items
                 </Typography>
               </Stack>
-              <Stack maxWidth={isMobile ? "360px" : "650px"}>
-                <TaskSlider products={productFromApi} />
+              <Stack maxWidth={isMobile ? "320px" : "650px"}>
+                <ProductCarousel products={productFromApi} />
               </Stack>
             </Stack>
           </Stack>
