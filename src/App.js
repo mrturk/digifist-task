@@ -36,6 +36,12 @@ const productFromApi = [
   },
 ];
 
+const bgImageCss = {
+  backgroundImage: `url("assets/img/bg.png")`,
+  backgroundRepeat: "no-repeat",
+  backgroundPosition: "center",
+};
+
 function App() {
   const theme = useTheme();
   const isMobile = useMediaQuery(theme.breakpoints.down("md"));
@@ -52,20 +58,15 @@ function App() {
         sx={
           isMobile
             ? {
-                backgroundImage: `url("assets/img/bg.png")`,
-                backgroundRepeat: "no-repeat",
-                backgroundSize: "cover",
-                backgroundPosition: "center",
+                ...bgImageCss,
+                backgroundSize: "100% 100%",
               }
             : {
-                backgroundImage: `url("assets/img/bg.png")`,
-                backgroundRepeat: "no-repeat",
+                ...bgImageCss,
                 backgroundSize: isDown1660px ? "cover" : "100% 100%",
-                backgroundPosition: "center",
               }
         }
         flex={isMobile ? 1.8 : 1}
-        bgcolor="red"
       />
       <Stack
         flex={1}
