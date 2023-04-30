@@ -66,7 +66,7 @@ function App() {
                 backgroundSize: isDown1660px ? "cover" : "100% 100%",
               }
         }
-        flex={isMobile ? 1.5 : 1}
+        flex={isMobile ? 1.38 : 1}
       />
       <Stack
         flex={1}
