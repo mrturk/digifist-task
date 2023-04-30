@@ -53,7 +53,7 @@ function App() {
         sx={{
           "&& .left-image": isMobile
             ? {
-                minHeight: "450px",
+                minHeight: "545px",
                 maxHeight: "650px",
                 maxWidth: "900px",
                 minWidth: "360px",
