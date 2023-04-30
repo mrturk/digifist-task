@@ -44,43 +44,41 @@ function App() {
   return (
     <Stack
       flexDirection={isMobile ? "column" : "row"}
-      minHeight="100vh"
+      height="100vh"
       flex={1}
       bgcolor="white"
-      position="relative"
     >
       <Stack
-        sx={{
-          "&& .left-image": isMobile
+        sx={
+          isMobile
             ? {
-                minHeight: "545px",
-                maxHeight: "650px",
-                maxWidth: "900px",
-                minWidth: "360px",
-                width: "100%",
-                marginX: "auto",
-                objectFit: "cover",
+                backgroundImage: `url("assets/img/bg.png")`,
+                backgroundRepeat: "no-repeat",
+                backgroundSize: "cover",
+                backgroundPosition: "center",
               }
             : {
-                width: "100%",
-                height: "100vh",
-                objectFit: isDown1660px ? "cover" : "fill",
-              },
-        }}
-        flex={1}
-      >
-        <img className="left-image" src="assets/img/bg.png" alt="image" />
-      </Stack>
-
+                backgroundImage: `url("assets/img/bg.png")`,
+                backgroundRepeat: "no-repeat",
+                backgroundSize: isDown1660px ? "cover" : "100% 100%",
+                backgroundPosition: "center",
+              }
+        }
+        flex={isMobile ? 1.8 : 1}
+        bgcolor="red"
+      />
       <Stack
         flex={1}
         justifyContent="center"
         alignItems="center"
-        bottom="64px"
-        position={isMobile ? "absolute" : "initial"}
-        sx={isMobile ? { width: "100%" } : { flex: "1" }}
+        position="relative"
       >
-        <Stack paddingLeft={isMobile ? "0px" : "20px"} gap="12px">
+        <Stack
+          position={isMobile ? "absolute" : "initial"}
+          top="-260px"
+          paddingLeft={isMobile ? "0px" : "20px"}
+          gap="12px"
+        >
           <Stack>
             <Typography
               fontFamily="ITC Avant Garde Gothic Pro"
