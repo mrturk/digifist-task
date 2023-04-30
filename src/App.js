@@ -53,11 +53,12 @@ function App() {
         sx={{
           "&& .left-image": isMobile
             ? {
-                height: "437px",
+                height: "550px",
                 maxWidth: "900px",
                 minWidth: "360px",
                 width: "100%",
                 marginX: "auto",
+                objectFit: "cover",
               }
             : {
                 width: "100%",
@@ -72,14 +73,14 @@ function App() {
 
       <Stack
         position={isMobile ? "absolute" : "inherit"}
-        bottom="65px"
+        bottom="100px"
         sx={
           isMobile
             ? { width: "100%", justifyContent: "center", alignItems: "center" }
             : { flex: "1", paddingTop: "120px" }
         }
       >
-        <Stack padding={isMobile ? "20px" : "0px"} gap="12px" className="">
+        <Stack padding={isMobile ? "20px" : "0px"} gap="12px">
           <Stack>
             <Typography
               fontFamily="ITC Avant Garde Gothic Pro"
@@ -88,6 +89,7 @@ function App() {
               lineHeight="40.62px"
               maxWidth={isMobile ? "312px" : "494px"}
               width="100%"
+              color={isMobile ? "white" : "black"}
             >
               Everyday items, we have something to suit every occasion.
             </Typography>
@@ -117,6 +119,7 @@ function App() {
                   fontStyle="normal"
                   fontSize="12.8px"
                   lineHeight="17.48px"
+                  color={isMobile ? "white" : "#666666"}
                   sx={{
                     textDecoration: "underline",
                     textUnderlineOffset: "5px",
