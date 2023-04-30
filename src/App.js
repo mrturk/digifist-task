@@ -47,14 +47,13 @@ function App() {
       minHeight="100vh"
       flex={1}
       bgcolor="white"
-      gap="120px"
       position="relative"
     >
       <Stack
         sx={{
           "&& .left-image": isMobile
             ? {
-                height: "500px",
+                maxHeight: "550px",
                 maxWidth: "900px",
                 minWidth: "360px",
                 width: "100%",
@@ -73,13 +72,14 @@ function App() {
       </Stack>
 
       <Stack
-        position={isMobile ? "absolute" : "initial"}
+        flex={1}
         justifyContent="center"
         alignItems="center"
-        bottom="80px"
+        bottom="64px"
+        position={isMobile ? "absolute" : "initial"}
         sx={isMobile ? { width: "100%" } : { flex: "1" }}
       >
-        <Stack padding={isMobile ? "20px" : "0px"} gap="12px">
+        <Stack paddingLeft={isMobile ? "0px" : "20px"} gap="12px">
           <Stack>
             <Typography
               fontFamily="ITC Avant Garde Gothic Pro"
