@@ -17,22 +17,22 @@ export default function ProductCarousel({ products }) {
 
   const [next, setNext] = useState(true);
 
-  const [screenwidth, setScreenWidth] = useState(getCurrentWidth());
+  const [screenWidth, setScreenWidth] = useState(getCurrentScreenWidth());
 
-  function getCurrentWidth() {
+  function getCurrentScreenWidth() {
     return window.innerWidth;
   }
 
   useEffect(() => {
-    const updateWidth = () => {
-      setScreenWidth(getCurrentWidth());
+    const updateScreenWidth = () => {
+      setScreenWidth(getCurrentScreenWidth());
     };
-    window.addEventListener("resize", updateWidth);
+    window.addEventListener("resize", updateScreenWidth);
 
     return () => {
-      window.removeEventListener("resize", updateWidth);
+      window.removeEventListener("resize", updateScreenWidth);
     };
-  }, [screenwidth]);
+  }, [screenWidth]);
 
   const onNext = () => {
     ref.current.scrollTo({
@@ -70,7 +70,7 @@ export default function ProductCarousel({ products }) {
 
   return (
     <Stack
-      maxWidth={isSm ? `${screenwidth}px` : isMd ? "496px" : "602px"}
+      maxWidth={isSm ? `${screenWidth}px` : isMd ? "496px" : "602px"}
       sx={{ position: "relative" }}
     >
       <Stack
