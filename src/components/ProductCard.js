@@ -54,7 +54,7 @@ const ProductCard = ({ product }) => {
                 lineHeight="20.48px"
                 color="#000000"
               >
-                365 Signature Hoodie
+                {product.content}
               </Typography>
             )}
           </Stack>

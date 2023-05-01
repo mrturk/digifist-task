@@ -6,7 +6,7 @@ import ProductCarousel from "./components/ProductCarousel";
 const productFromApi = [
   {
     productImg: "assets/img/bg-1.png",
-    content: "Organic Skinny High Waist Jeans",
+    content: "365 Signature Hoodie",
     price: "€33.95",
   },
   {
