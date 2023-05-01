@@ -8,9 +8,9 @@ import "react-indiana-drag-scroll/dist/style.css";
 
 export default function ProductCarousel({ products }) {
   const theme = useTheme();
-  const isMobile = useMediaQuery(theme.breakpoints.down("md"));
+  const isMd = useMediaQuery(theme.breakpoints.down("md"));
   const isSm = useMediaQuery(theme.breakpoints.down("sm"));
-  console.log(isSm);
+
   const ref = useRef();
 
   const [prev, setPRev] = useState(false);
@@ -53,7 +53,7 @@ export default function ProductCarousel({ products }) {
 
   return (
     <Stack
-      maxWidth={isSm ? "336px" : isMobile ? "496px" : "602px"}
+      maxWidth={isSm ? "336px" : isMd ? "496px" : "602px"}
       sx={{ position: "relative" }}
     >
       <Stack
@@ -72,7 +72,7 @@ export default function ProductCarousel({ products }) {
         flexDirection="row"
         gap="32px"
       >
-        {isMobile ? (
+        {isMd ? (
           <ScrollContainer className="scroll-drag">
             {products.map((item, index) => {
               return <ProductCard key={index} product={item} />;
@@ -85,7 +85,7 @@ export default function ProductCarousel({ products }) {
         )}
       </Stack>
 
-      {!isMobile && (
+      {!isMd && (
         <>
           <Stack position="absolute" left="50px" top="40%">
             {prev && (

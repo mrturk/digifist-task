@@ -44,20 +44,19 @@ const bgImageCss = {
 
 function App() {
   const theme = useTheme();
-  const isMobile = useMediaQuery(theme.breakpoints.down("md"));
+  const isMd = useMediaQuery(theme.breakpoints.down("md"));
   const isDown1660px = useMediaQuery(theme.breakpoints.down(1460));
-  const isSm = useMediaQuery(theme.breakpoints.down("sm"));
 
   return (
     <Stack
-      flexDirection={isMobile ? "column" : "row"}
+      flexDirection={isMd ? "column" : "row"}
       height="100vh"
       flex={1}
       bgcolor="white"
     >
       <Stack
         sx={
-          isMobile
+          isMd
             ? {
                 ...bgImageCss,
                 backgroundSize: "100% 100%",
@@ -67,7 +66,7 @@ function App() {
                 backgroundSize: isDown1660px ? "cover" : "100% 100%",
               }
         }
-        flex={isMobile ? 1.38 : 1}
+        flex={isMd ? 1.38 : 1}
       />
       <Stack
         flex={1}
@@ -76,26 +75,26 @@ function App() {
         position="relative"
       >
         <Stack
-          position={isMobile ? "absolute" : "initial"}
+          position={isMd ? "absolute" : "initial"}
           top="-259px"
-          paddingLeft={isMobile ? "0px" : "128px"}
+          paddingLeft={isMd ? "0px" : "128px"}
           gap="12px"
         >
           <Stack>
             <Typography
               fontFamily="ITC Avant Garde Gothic Pro"
               fontWeight="700"
-              fontSize={isMobile ? "20px" : "31.25px"}
+              fontSize={isMd ? "20px" : "31.25px"}
               lineHeight="40.62px"
-              maxWidth={isMobile ? "312px" : "494px"}
+              maxWidth={isMd ? "312px" : "494px"}
               width="100%"
-              color={isMobile ? "white" : "#000000"}
+              color={isMd ? "white" : "#000000"}
             >
               Everyday items, we have something to suit every occasion.
             </Typography>
           </Stack>
           <Stack gap="32px">
-            {!isMobile && (
+            {!isMd && (
               <Stack>
                 <Typography
                   fontFamily="Avenir"
@@ -119,7 +118,7 @@ function App() {
                   fontStyle="normal"
                   fontSize="12.8px"
                   lineHeight="17.48px"
-                  color={isMobile ? "white" : "#000000"}
+                  color={isMd ? "white" : "#000000"}
                   sx={{
                     textDecoration: "underline",
                     textUnderlineOffset: "5px",
