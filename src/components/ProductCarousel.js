@@ -51,7 +51,7 @@ export default function ProductCarousel({ products }) {
 
   return (
     <Stack
-      maxWidth={isMobile ? "300px" : "650px"}
+      maxWidth={isMobile ? "335px" : "650px"}
       sx={{ position: "relative" }}
     >
       <Stack
