@@ -22,7 +22,7 @@ const ProductCard = ({ product }) => {
 
   const [selected, setSelected] = useState(0);
   return (
-    <Stack gap="12px">
+    <Stack gap={isMobile ? "8px" : "12px"}>
       <Stack>
         <img
           style={{
@@ -59,7 +59,11 @@ const ProductCard = ({ product }) => {
             )}
           </Stack>
         </Stack>
-        <Stack flexDirection="row" justifyContent="space-between">
+        <Stack
+          flexDirection={isMobile ? "column" : "row"}
+          justifyContent={isMobile ? "flex-start" : "space-between"}
+          gap={isMobile ? "8px" : "0px"}
+        >
           <Stack
             fontFamily="Avenir"
             fontWeight="bold"
@@ -69,13 +73,11 @@ const ProductCard = ({ product }) => {
           >
             €33.95
           </Stack>
-          <Stack justifyContent="center" alignItems="center">
-            <Stack
-              gap="10px"
-              flexDirection="row"
-              justifyContent="center"
-              alignItems="center"
-            >
+          <Stack
+            justifyContent={isMobile ? "flex-start" : "center"}
+            alignItems={isMobile ? "flex-start" : "center"}
+          >
+            <Stack alignItems="center" gap="10px" flexDirection="row">
               {colorDataForApi.map((item, index) => {
                 return (
                   <Stack
