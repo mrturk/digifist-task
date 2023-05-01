@@ -108,7 +108,7 @@ export default function ProductCarousel({ products }) {
           <Stack position="absolute" left="50px" top="40%">
             {prev && (
               <IconButton
-                style={{
+                sx={{
                   width: "40px",
                   height: "40px",
                   border: "1px solid rgba(0, 0, 0, 0.1)",
@@ -128,7 +128,7 @@ export default function ProductCarousel({ products }) {
           <Stack position="absolute" right="50px" top="40%">
             {next && (
               <IconButton
-                style={{
+                sx={{
                   width: "40px",
                   height: "40px",
                   border: "1px solid rgba(0, 0, 0, 0.1)",
