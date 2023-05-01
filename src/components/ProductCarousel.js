@@ -87,7 +87,7 @@ export default function ProductCarousel({ products }) {
 
       {!isMobile && (
         <>
-          <Stack position="absolute" left="20px" top="40%">
+          <Stack position="absolute" left="50px" top="40%">
             {prev && (
               <IconButton
                 style={{
@@ -107,7 +107,7 @@ export default function ProductCarousel({ products }) {
               </IconButton>
             )}
           </Stack>
-          <Stack position="absolute" right="20px" top="40%">
+          <Stack position="absolute" right="50px" top="40%">
             {next && (
               <IconButton
                 style={{

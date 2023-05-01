@@ -46,6 +46,7 @@ function App() {
   const theme = useTheme();
   const isMobile = useMediaQuery(theme.breakpoints.down("md"));
   const isDown1660px = useMediaQuery(theme.breakpoints.down(1460));
+  const isSm = useMediaQuery(theme.breakpoints.down("sm"));
 
   return (
     <Stack
@@ -71,7 +72,7 @@ function App() {
       <Stack
         flex={1}
         justifyContent="center"
-        alignItems="center"
+        alignItems={isSm ? "end" : "center"}
         position="relative"
       >
         <Stack
