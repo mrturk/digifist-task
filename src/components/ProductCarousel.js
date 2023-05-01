@@ -9,7 +9,7 @@ import "react-indiana-drag-scroll/dist/style.css";
 export default function ProductCarousel({ products }) {
   const theme = useTheme();
   const isMd = useMediaQuery(theme.breakpoints.down("md"));
-  const isSm = useMediaQuery(theme.breakpoints.down("sm"));
+  const isXs = useMediaQuery(theme.breakpoints.down("xs"));
 
   const ref = useRef();
 
@@ -70,7 +70,13 @@ export default function ProductCarousel({ products }) {
 
   return (
     <Stack
-      maxWidth={isSm ? `${screenWidth}px` : isMd ? "496px" : "602px"}
+      maxWidth={
+        isXs
+          ? "360px"
+          : isMd
+          ? `${screenWidth}px`
+          : `${screenWidth / 2 - 119}px`
+      }
       sx={{ position: "relative" }}
     >
       <Stack

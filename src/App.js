@@ -72,7 +72,7 @@ function App() {
       <Stack
         flex={1}
         justifyContent="center"
-        alignItems={isSm ? "end" : "center"}
+        alignItems={isMd ? "end" : "center"}
         position="relative"
       >
         <Stack
