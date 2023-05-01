@@ -1,7 +1,7 @@
 import { Stack, Typography, useMediaQuery, useTheme } from "@mui/material";
 import { useState } from "react";
 
-const colorDataForApi = [
+const colorDataFromApi = [
   {
     color: "#99C3CC",
   },
@@ -78,7 +78,7 @@ const ProductCard = ({ product }) => {
             alignItems={isMobile ? "flex-start" : "center"}
           >
             <Stack alignItems="center" gap="10px" flexDirection="row">
-              {colorDataForApi.map((item, index) => {
+              {colorDataFromApi.map((item, index) => {
                 return (
                   <Stack
                     key={index}

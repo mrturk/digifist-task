@@ -13,7 +13,7 @@ export default function ProductCarousel({ products }) {
 
   const ref = useRef();
 
-  const [prev, setPRev] = useState(false);
+  const [prev, setPrev] = useState(false);
 
   const [next, setNext] = useState(true);
 
@@ -41,7 +41,7 @@ export default function ProductCarousel({ products }) {
       behavior: "smooth",
     });
     if (ref.current.scrollLeft + 262 > 0) {
-      setPRev(true);
+      setPrev(true);
     }
     if (
       ref.current.scrollLeft + 262 >=
@@ -64,7 +64,7 @@ export default function ProductCarousel({ products }) {
       setNext(true);
     }
     if (ref.current.scrollLeft - 262 < 0) {
-      setPRev(false);
+      setPrev(false);
     }
   };
 
