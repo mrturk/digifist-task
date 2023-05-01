@@ -127,9 +127,7 @@ function App() {
                   Shop all everyday items
                 </Typography>
               </Stack>
-              <Stack maxWidth={isMobile ? "300px" : "650px"}>
-                <ProductCarousel products={productFromApi} />
-              </Stack>
+              <ProductCarousel products={productFromApi} />
             </Stack>
           </Stack>
         </Stack>
