@@ -45,6 +45,7 @@ const bgImageCss = {
 function App() {
   const theme = useTheme();
   const isMd = useMediaQuery(theme.breakpoints.down("md"));
+  const isSm = useMediaQuery(theme.breakpoints.down("sm"));
   const isDown1660px = useMediaQuery(theme.breakpoints.down(1460));
 
   return (
@@ -71,7 +72,7 @@ function App() {
       <Stack
         flex={1}
         justifyContent="center"
-        alignItems={"center"}
+        alignItems={isSm ? "end" : "center"}
         position="relative"
       >
         <Stack
