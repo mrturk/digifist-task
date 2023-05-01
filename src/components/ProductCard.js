@@ -42,7 +42,7 @@ const ProductCard = ({ product }) => {
                 fontWeight="400"
                 fontSize="12.8px"
                 lineHeight="20.48px"
-                color="black"
+                color="#000000"
               >
                 Organic Skinny High Waist Raw Hem Jeans
               </Typography>
@@ -52,7 +52,7 @@ const ProductCard = ({ product }) => {
                 fontWeight="400"
                 fontSize="12.8px"
                 lineHeight="20.48px"
-                color="black"
+                color="#000000"
               >
                 365 Signature Hoodie
               </Typography>
@@ -67,7 +67,7 @@ const ProductCard = ({ product }) => {
           <Stack
             fontFamily="Avenir"
             fontWeight="bold"
-            color="black"
+            color="#000000"
             fontSize="12.8px"
             lineHeight="20.48px"
           >
@@ -88,7 +88,7 @@ const ProductCard = ({ product }) => {
                     width={selected === index ? "12px" : "11px"}
                     height={selected === index ? "12px" : "11px"}
                     borderRadius="50%"
-                    border={selected === index ? "1px solid black" : "none"}
+                    border={selected === index ? "1px solid #000000" : "none"}
                     justifyContent="center"
                     alignItems="center"
                     bgcolor={selected === index ? "none" : item.color}

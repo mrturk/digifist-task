@@ -88,7 +88,7 @@ function App() {
               lineHeight="40.62px"
               maxWidth={isMobile ? "312px" : "494px"}
               width="100%"
-              color={isMobile ? "white" : "black"}
+              color={isMobile ? "white" : "#000000"}
             >
               Everyday items, we have something to suit every occasion.
             </Typography>
@@ -118,7 +118,7 @@ function App() {
                   fontStyle="normal"
                   fontSize="12.8px"
                   lineHeight="17.48px"
-                  color={isMobile ? "white" : "black"}
+                  color={isMobile ? "white" : "#000000"}
                   sx={{
                     textDecoration: "underline",
                     textUnderlineOffset: "5px",
