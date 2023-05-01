@@ -22,7 +22,7 @@ const ProductCard = ({ product }) => {
 
   const [selected, setSelected] = useState(0);
   return (
-    <Stack gap={isMobile ? "8px" : "12px"}>
+    <Stack width={isMobile ? "148px" : "230px"} gap={isMobile ? "8px" : "12px"}>
       <Stack>
         <img
           style={{
