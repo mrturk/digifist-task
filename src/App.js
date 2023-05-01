@@ -90,6 +90,7 @@ function App() {
               maxWidth={isMd ? "312px" : "494px"}
               width="100%"
               color={isMd ? "white" : "#000000"}
+              paddingX={isMd ? "24px" : "0px"}
             >
               Everyday items, we have something to suit every occasion.
             </Typography>
@@ -120,6 +121,7 @@ function App() {
                   fontSize="12.8px"
                   lineHeight="17.48px"
                   color={isMd ? "white" : "#000000"}
+                  paddingX={isMd ? "24px" : "0px"}
                   sx={{
                     textDecoration: "underline",
                     textUnderlineOffset: "5px",

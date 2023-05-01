@@ -1,6 +1,6 @@
 /* eslint-disable */
 import { Stack, IconButton, useMediaQuery, useTheme } from "@mui/material";
-import { useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { ArrowIcon } from "../icons/ArrowIcon";
 import ProductCard from "./ProductCard";
 import { ScrollContainer } from "react-indiana-drag-scroll";
@@ -16,6 +16,25 @@ export default function ProductCarousel({ products }) {
   const [prev, setPRev] = useState(false);
 
   const [next, setNext] = useState(true);
+
+  const [screenSize, setScreenSize] = useState(getCurrentDimension());
+
+  function getCurrentDimension() {
+    return {
+      width: window.innerWidth,
+    };
+  }
+
+  useEffect(() => {
+    const updateDimension = () => {
+      setScreenSize(getCurrentDimension());
+    };
+    window.addEventListener("resize", updateDimension);
+
+    return () => {
+      window.removeEventListener("resize", updateDimension);
+    };
+  }, [screenSize]);
 
   const onNext = () => {
     ref.current.scrollTo({
@@ -53,7 +72,7 @@ export default function ProductCarousel({ products }) {
 
   return (
     <Stack
-      maxWidth={isSm ? "336px" : isMd ? "496px" : "602px"}
+      maxWidth={isSm ? screenSize : isMd ? "496px" : "602px"}
       sx={{ position: "relative" }}
     >
       <Stack
@@ -67,6 +86,7 @@ export default function ProductCarousel({ products }) {
             display: "flex",
             flexDirection: "row",
             gap: "12px",
+            paddingX: "24px",
           },
         }}
         flexDirection="row"
